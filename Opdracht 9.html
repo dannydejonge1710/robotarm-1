@@ -11,23 +11,19 @@
             robotArm.loadLevel("exercise 10");
 
 
-
             for(var count = 9; count>0; count--){
+                robotArm.grab();
 
-              robotArm.grab();
+                for(var i = 0; i<count; i++){
+                    robotArm.moveRight();
+                }
+                robotArm.drop();
 
-            for(var i = 0; i<count; i++){
+                count = count-1;
 
-                robotArm.moveRight();
-            }
-             robotArm.drop();
-
-             count = count-1;
-
-            for(var i = 0; i <count; i++) {
-                
+                for(var i = 0; i <count; i++) {
                 robotArm.moveLeft();
-            }
+                }
             }
             robotArm.run();
 
